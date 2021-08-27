@@ -30,6 +30,11 @@ module.exports = appInfo => {
     },
     domainWhiteList: [ '*' ], // 配置白名单
   };
+  config.cors = {
+    // origin: '*', // 允许所有跨域访问
+    credentials: true, // 允许 Cookie 跨域跨域
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+  };
   config.view = {
     mapping: { '.html': 'ejs' }, // 左边写成.html后缀，会自动渲染.html文件
   };
@@ -42,18 +47,6 @@ module.exports = appInfo => {
   config.multipart = {
     mode: 'file',
     fileSize: '50kb',
-  };
-  config.security = {
-    csrf: {
-      enable: false,
-      ignoreJSON: true,
-    },
-    domainWhiteList: [ '*' ], // 配置白名单
-  };
-  config.cors = {
-    origin: '*', // 允许所有跨域访问
-    credentials: true, // 允许 Cookie 跨域跨域
-    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
   };
   exports.mysql = {
     // 单数据库信息配置
