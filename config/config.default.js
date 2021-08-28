@@ -23,13 +23,6 @@ module.exports = appInfo => {
     // myAppName: 'egg',
     uploadDir: 'app/public/upload',
   };
-  // config.cluster = {
-  //   listen: {
-  //     path: '',
-  //     port: 443, // 项目启动的端口号
-  //     hostname: '106.75.87.103',
-  //   },
-  // };
   config.security = {
     csrf: {
       enable: false,
