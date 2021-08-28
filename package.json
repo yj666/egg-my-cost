@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "egg": "^2.15.1",
+    "egg-cluster": "^1.27.0",
     "egg-cors": "^2.2.3",
     "egg-jwt": "^3.1.7",
     "egg-mysql": "^3.0.0",
@@ -29,7 +30,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-react",
+    "start": "egg-scripts start --daemon --title=egg-server-react --port=443",
     "stop": "egg-scripts stop --title=egg-server-react",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
